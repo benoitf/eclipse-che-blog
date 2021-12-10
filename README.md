@@ -12,17 +12,25 @@ Before opening a pull request you may want to see how the blog post renders with
 
 ### locally
 
-Instructions to locally install Jekyll
+Using docker/podman:
 
+From the root directory of the repository:
 ```
-bundle exec jekyll serve
+$ docker run --rm -it -p 4000:4000 -p 35729:35729 -v $(pwd):/projects quay.io/eclipse/che-blog jekyll serve --incremental --watch --host 0.0.0.0 --livereload --livereload-port 35729
 ```
+Content is available at http://localhost:4000
+
 
 ### online
 
+Open the devfile on a che server instance running DevWorkspaces: (devfile v2)
+
+https://che-host#https://github.com/eclipse-che/blog
+
+Vale and Asciidoc VS Code extensions will report problems directly in the editor
 
 ## How to review a blog post
 
-
+TBD
 
 
