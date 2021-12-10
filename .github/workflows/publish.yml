@@ -16,6 +16,11 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
+    
+    - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
 
     - name: 🔨 install dependencies & build site
       uses: limjh16/jekyll-action-ts@v2
