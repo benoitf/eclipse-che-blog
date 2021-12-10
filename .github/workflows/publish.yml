@@ -33,7 +33,7 @@ jobs:
     - uses: helaili/jekyll-action@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        jekyll_src: .
+        jekyll_src: 'Eclipse Che Blog'
 
     # Specify the target branch (optional)
     - uses: helaili/jekyll-action@v2
