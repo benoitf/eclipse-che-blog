@@ -50,3 +50,16 @@ jobs:
        with:
          name: pull-request-sha
          path: PR_SHA
+     - uses: actions/upload-artifact@v2
+       with:
+         name: blog-post-source
+         path: _posts
+     - uses: jitterbit/get-changed-files@v1
+       with:
+         format: 'json'
+     - run: |
+         jq -r '.' <<< '${{ steps.files.outputs.all }} > modified_files.json
+     - uses: actions/upload-artifact@v2
+       with:
+         name: modified-files
+         path: modified_files.json

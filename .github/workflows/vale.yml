@@ -8,20 +8,33 @@
 #
 
 name: Linting with Vale
+
 on:
-  - push
+  workflow_run:
+    workflows: ["Build PR check"]
+    types:
+      - completed
+
 jobs:
   vale:
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
+      - name: download modified files
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: ${{ github.event.workflow_run.workflow_id }}
+          name: modified-files
+          path: modified-files/
+      - name: download blog posts source
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: ${{ github.event.workflow_run.workflow_id }}
+          name: _posts
       - name: Vale Linter
         uses: errata-ai/vale-action@v1.4.2
         with:
-          files: __onlyModified
-          styles: | 
+          files: modified-files/
+          styles: |
             https://github.com/vale-at-red-hat/vale-at-red-hat/releases/latest/download/RedHat.zip
             https://github.com/vale-at-red-hat/chedocs/releases/latest/download/CheDocs.zip
           config: https://raw.githubusercontent.com/vale-at-red-hat/vale-at-red-hat/master/.vale-for-github-action.ini
