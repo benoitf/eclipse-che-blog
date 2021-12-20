@@ -123,7 +123,7 @@ The short name for the `devfilePath` parameter is `df`.
 ====
 
 
-=== Workspace creation
+=== Creating or reusing a workspace
 
 
 If you enter a URL such as `pass:c,a,q[{prod-url}#http://github.com/foo/bar]` and you don’t have any workspace named `bar`, {prod} creates a workspace named `bar` and clones the GitHub repository.
