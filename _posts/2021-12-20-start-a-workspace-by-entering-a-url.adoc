@@ -130,6 +130,8 @@ If you enter a URL such as `pass:c,a,q[{prod-url}#http://github.com/foo/bar]` an
 
 Each time you enter a URL such as `{prod-url}#http://github.com/foo/bar` again, {prod} reopens the existing workspace `bar`.
 
+=== Always creating a new workspace
+
 To create another workspace each time you enter the same URL, enter the URL appended with `?new` in the URL format `pass:c,a,q[{prod-url}#http://github.com/foo/bar?new]`. Even if you already have a workspace named `bar`, each time you enter such URL, {prod} will create another, sequentially named workspace (example: `bar-abcde`).
 
 == Syntax recap
