@@ -76,7 +76,7 @@ URL syntax for cloning BitBucket-hosted repositories:
 WARNING: {prod} supports only on premises BitBucket instances.
 
 
-=== Using a different editor or Integrated Development Environment (IDE)
+=== Defining the editor or Integrated Development Environment (IDE)
 
 {prod} starts workspaces with a default IDE: {prod-short} Theia.
 
