@@ -12,7 +12,7 @@ slug: /@florent.benoit/start-a-workspace-by-entering-a-url
 // https://excalidraw.com/#json=3zYwB9DOAkwySS_Mj5coI,-DRn9IliQXj1slGJWAdqFw
 image::../../../assets/img/start-a-workspace/start-workspace-link.png[Start a workspace link,link="../../assets/img/start-a-workspace/start-workspace-link.png"]
 
-== Starting a workspace by entering a URL
+== Authoring an URL to start a workspace
 
 As a user, you can create a workspace containing a clone of a Git repository by entering:
 
