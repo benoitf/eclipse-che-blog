@@ -138,7 +138,7 @@ To create another workspace each time you enter the same URL, enter the URL appe
 
 [options="header"]
 |=======================
-|parameter|keyword      |example
+|parameter|keyword |example
 | repository | `#` followed by `URL_of_the_repository` | `#https://github.com/eclipse-che/che-server/tree/7.40.x`
 | editor | `che-editor` | `?che-editor=eclipse/che-theia/latest`
 | override devfile path | `devfilePath` | `?devfilePath=.che/my-devfile.yaml`
